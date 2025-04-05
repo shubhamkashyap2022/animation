@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomy Explorer</title>
+    <link rel="stylesheet" href="Anatomypage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Anatomy Explorer</h1>
+        <nav class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="about.html" target="_blank">About Us</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+            <button class="signup-btn" onclick="showPage('signup')">Sign Up</button>
+        </nav>
+    </div>
+
+    <!-- Anatomy Gallery -->
+    <div id="gallery-page" class="page-container">
+        <h2>Select Organ to Study</h2>
+        <div class="gallery">
+            <div class="organ-card" onclick="showScanner('Heart')">
+                <a href="heart.html">
+                    <img src="heart.jpg" alt="Heart" width="150">
+                    <h3>Heart</h3>
+                </a>
+                
+            </div>
+            <div class="organ-card" onclick="showScanner('Brain')">
+                <a href="brain.html">
+                    <img src="brain.webp" alt="Brain" width="150">
+                    <h3>Brain</h3>
+                </a>
+                
+            </div>
+            <div class="organ-card" onclick="showScanner('Skeleton')">
+                <a href="skeleton.html">
+                    <img src="skeleton.jpeg" alt="Skeleton" width="150">
+                    <h3>Skeleton</h3>
+                </a>
+                
+            </div>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <!-- <script>
+        function showScanner(organ) {
+            document.getElementById('output').textContent = `You selected: ${organ}`;
+        }
+
+        function showPage(page) {
+            alert(`Navigating to ${page} page`);
+        }
+    </script> -->
+</body>
+</html>

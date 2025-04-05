@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomy Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Anatomy Explorer</h1>
+        <nav class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="About.html" onclick="showPage('about')" target="new">About Us</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+            <button class="signup-btn" onclick="showPage('signup')">Sign Up</button>
+        </nav>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page-container active">
+        <div class="login-container">
+            <h2>Login</h2><br>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" id="username" placeholder="Enter Username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                </div>
+                <!-- Login Button -->
+                <button type="submit" class="login-button" onclick="window.location.href='Anatomypage.html'; return false;">Login</button>
+
+                <button type="submit" class="secondary-btn" onclick="showPage('register')" >Don't have an account? <a href="home.html">Register</a>
+
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Page -->
+        <div id="signup-page" class="page-container">
+        <div class="login-container">
+            <h2>Sign Up</h2>
+            <form id="signupForm" onsubmit="return handleSignup(event)">
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" id="signup-username" placeholder="Enter Username or Email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" id="signup-password" placeholder="Enter Password" required>
+                </div>
+                <button type="submit" class="login-button">Sign Up</button>
+                <button type="button" class="secondary-btn" onclick="showPage('login')">Already have an account?</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <!-- Scanner Page -->
+    <div id="scanner-page" class="page-container">
+        <div class="scanner-container">
+            <h2>Scan Organ Model</h2>
+            <div id="scanner-box"></div>
+            <button onclick="startScan()">Start Scan</button>
+            <div id="3d-viewer"></div>
+        </div>
+    </div>
+
+    <script src="an.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

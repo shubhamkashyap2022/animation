@@ -1,0 +1,238 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f7;
+}
+
+/* Header Styles */
+.header {
+    background: #2a5c8d;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+h2{
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-btn {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Page Container */
+.page-container {
+    margin-top: 80px;
+    padding: 2rem;
+    display: none;
+}
+
+.page-container.active {
+    display: block;
+}
+
+/* Form Styles */
+.login-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+input::placeholder{
+    color: gray;
+    opacity: .5;
+}
+
+button.login-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #007bff, #00a3cc); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button a{
+    color: #161718;
+    text-decoration: none;}
+
+button.login-button:hover {
+    background: linear-gradient(to right, #007bff,#007bff;); /* Darker gradient on hover */
+}
+
+.secondary-btn {
+    background: transparent;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #393b3f;
+    text-decoration: none;
+}
+
+/* Social Login */
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #555;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #eee;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.organ-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.organ-card:hover {
+    transform: translateY(-5px);
+}
+
+.organ-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Scanner Styles */
+.scanner-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#scanner-box {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border: 2px dashed #2a5c8d;
+    margin: 2rem auto;
+    position: relative;
+}
+
+#3d-viewer {
+    width: 100%;
+    height: 600px;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .signup-btn {
+        margin: 10px 0 0 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+    }
+}

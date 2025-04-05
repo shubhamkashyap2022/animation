@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <style>body { margin: 0; overflow: hidden; }</style>
+</head>
+<body>
+    <a-scene embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix;"
+    >
+    <a-marker type="pattern" url="https://cdn.glitch.global/b5648866-5da8-44a9-9052-b62f7274bb50/pattern-8code.patt?v=1743782944349">
+<!--         for shadow -->
+<!--         <a-plane
+    rotation="-90 0 0"
+    width="1"
+    height="1"
+    color="#000"
+    opacity="0.2"
+    position="0 0 0"
+        ></a-plane> -->
+        
+        
+        <a-gltf-model src="https://cdn.glitch.global/b5648866-5da8-44a9-9052-b62f7274bb50/skeleton%20(1).glb?v=1743783612592" position="0 0 0" scale="1 1 1" rotation="0 0 0"
+        ></a-gltf-model>
+<!--         <a-box position="0 0.5 0" color="blue" depth="1" height="1" width="1"></a-box> -->
+        </a-marker>
+
+<!--       for adding anither model -->
+    <a-marker type="pattern" url="https://cdn.glitch.global/b5648866-5da8-44a9-9052-b62f7274bb50/pattern-URL%20QR%20Code%20(1).patt?v=1743782313986">
+        <a-gltf-model
+        src="https://cdn.glitch.global/b5648866-5da8-44a9-9052-b62f7274bb50/compressed_1743783722532_3d_labeled_brain_model.glb?v=1743784007564"
+        position="0 0 0" scale="1 1 1" rotation="0 0 0"
+        ></a-gltf-model>
+    </a-marker>
+
+<!--       for adding anither model -->
+    <a-marker type="pattern" url="https://cdn.glitch.global/b5648866-5da8-44a9-9052-b62f7274bb50/pattern-URL%20QR%20Code%20(2).patt?v=1743784564454">
+        <a-gltf-model
+        src="https://cdn.glitch.global/b5648866-5da8-44a9-9052-b62f7274bb50/compressed_1743783719566_adult_heart.glb?v=1743784154260"
+        position="0 0 0"
+        scale="22 22 22"
+        rotation="0 0 0"
+        ></a-gltf-model>
+    </a-marker>
+
+
+    <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
